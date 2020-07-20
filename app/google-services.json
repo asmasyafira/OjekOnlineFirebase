@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "676217766973",
+    "firebase_url": "https://ojek-online-a72e3.firebaseio.com",
+    "project_id": "ojek-online-a72e3",
+    "storage_bucket": "ojek-online-a72e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676217766973:android:bfe918a9ac508cad025654",
+        "android_client_info": {
+          "package_name": "com.example.ojekonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676217766973-6gf8ka2g555ipcfcj6s9b5gkggmo2mr5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoAyfhVHXbjIZyBnKhfbVKi1ABcQicOr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676217766973-6gf8ka2g555ipcfcj6s9b5gkggmo2mr5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
