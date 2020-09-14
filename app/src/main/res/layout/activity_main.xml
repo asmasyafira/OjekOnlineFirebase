@@ -15,14 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/navigation"
-        android:layout_below="@id/include_toolbar">
-
-
-    </FrameLayout>
+        android:layout_below="@id/include_toolbar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottomNav"
+        app:itemIconTint="@drawable/nav_color"
+        app:itemTextColor="@drawable/nav_color"
+        app:menu="@menu/navigation" />
 </RelativeLayout>

@@ -8,4 +8,5 @@ object Constant {
     val BaseUrlRoute = "https://maps.googleapis.com/maps/api/directions/" //untuk url gmaps nya
     val BaseUrlFcm = "https://fcm.googleapis.com"
     val Key = "key"
+    val MAPS_API = "***"
 }

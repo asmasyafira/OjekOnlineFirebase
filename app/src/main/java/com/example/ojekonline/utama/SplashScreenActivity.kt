@@ -12,6 +12,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private var auth: FirebaseAuth? = null
 
+    //TODO 14
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
@@ -23,5 +24,7 @@ class SplashScreenActivity : AppCompatActivity() {
             }
             else startActivity<LoginActivity>()
         },3000)
+        //Handler itu fungsi yg bakal ngelakuin tugas tertentu.
+        // if statementnya yg nentuin abis splash mau kmn
     }
 }

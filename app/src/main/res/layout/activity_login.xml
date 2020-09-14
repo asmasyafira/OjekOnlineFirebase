@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/yellow"
     tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_splash"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/motor" />
 
     <EditText
         android:id="@+id/loginName"
@@ -42,7 +50,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/background2"
         android:text="@string/login"
-        android:textColor="@color/white" />
+        android:textColor="@color/yellow2" />
 
     <TextView
         android:id="@+id/signUpLink"
@@ -65,7 +73,7 @@
         android:layout_marginRight="30dp"
         android:gravity="center"
         android:text="@string/or"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/signUpButtonGmail"
@@ -73,10 +81,10 @@
         android:layout_height="45dp"
         android:layout_below="@id/textOr"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/background2"
         android:text="@string/sign_up_google"
-        android:textColor="@color/white" />
+        android:textColor="@color/yellow2" />
 
 </RelativeLayout>

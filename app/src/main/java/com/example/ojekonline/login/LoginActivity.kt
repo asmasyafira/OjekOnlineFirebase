@@ -33,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //TODO 12
         auth = FirebaseAuth.getInstance()
 
         signUpButtonGmail.onClick {
@@ -56,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    //TODO 6
     //auth sign in yg biasa
     private fun authUserSignIn(email: String, pass: String) {
         var status: Boolean? = null
@@ -72,6 +74,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    //TODO 7
     //request sign in gmail
     private fun signIn() {
         val gson = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -85,6 +88,7 @@ class LoginActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, 4)
     }
 
+    //TODO 8
     //hasil request sign in google
     /* setelah user memilih account yg sudah ter signin akan
     mengambil informasi dari user
@@ -104,6 +108,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //TODO 9
     //untuk sign in firebase auth firebase
     private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount?) {
         var uid = String()
@@ -120,10 +125,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //TODO 10
     //cek database
     // apakah user yg signin udh ada di realtime database / blm
     private fun checkDatabase(uid: String?, acct: GoogleSignInAccount?) {
         val database = FirebaseDatabase.getInstance()
+
         val myRef = database.getReference(Constant.tb_Uaser)
         val query = myRef.orderByChild("uid").equalTo(auth?.uid)
 
@@ -131,6 +138,8 @@ class LoginActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
             }
 
+            //klo usernya udh ada, bakal msk ke mainact
+            //klo blm ada, data akan masuk ke database firebase
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()) {
                     startActivity<MainActivity>()
@@ -146,6 +155,7 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
+    //TODO 11
     /*proses ini hampir sama dengan signup, klo proses ini berhasil
     akan pindah ke authentikasi activity untuk memasukan dari nomer telepon user.
     'Any' nya ganti Boolean*/
@@ -160,6 +170,8 @@ class LoginActivity : AppCompatActivity() {
         val myRef = database.getReference(Constant.tb_Uaser)
 
         myRef.child(key?: "").setValue(user)
+        //setValue = menyimpan ke databse
+
         startActivity<AuthentikasiHpActivity>(Constant.Key to key)
 
         return true

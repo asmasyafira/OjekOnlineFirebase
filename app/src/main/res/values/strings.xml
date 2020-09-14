@@ -23,7 +23,7 @@
     <string name="rp_50_000">Rp.50.000</string>
     <string name="estimasi_waktu">Estimasi Waktu</string>
     <string name="_3_menit">3 menit</string>
-    <string name="pesan">pesan</string>
+    <string name="pesan">Pesan</string>
     <string name="title_activity_maps">Map</string>
     <string name="serpong_tanggerang">Serpong, Tanggerang</string>
     <string name="nama">Nama :</string>
@@ -31,4 +31,5 @@
     <string name="gmailku">asmasyfr@gmail.com</string>
     <string name="nomorku">081311977804</string>
     <string name="sign_out">Sign Out</string>
+    <string name="nama_driver">nama driver</string>
 </resources>

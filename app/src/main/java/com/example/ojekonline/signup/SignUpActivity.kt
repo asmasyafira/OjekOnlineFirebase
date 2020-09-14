@@ -20,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        //TODO 5
         auth = FirebaseAuth.getInstance()
         signUpButton.onClick {
             if (signUpEmail.text.isNotEmpty() &&
@@ -36,6 +37,7 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    //TODO 2
     private fun authUserSignUp(email: String, pass: String): Boolean? {
         auth = FirebaseAuth.getInstance()
         var status: Boolean? = null
@@ -58,6 +60,7 @@ class SignUpActivity : AppCompatActivity() {
         return status
     }
 
+    //TODO 4
     fun insertUser(name: String, email: String, hp: String, users: FirebaseUser): Boolean {
         var user = Users()
         user.uid = users.uid

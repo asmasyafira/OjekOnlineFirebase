@@ -80,7 +80,7 @@ class GPSTrack(c: Context) : Service(), LocationListener {
                     }
                     if (isGPSEnabled) {
                         if (location == null) {
-                            if (Companion.checkPermission(context))
+                            if (checkPermission(context))
                                 locationManager!!.requestLocationUpdates(
                                     LocationManager.GPS_PROVIDER, MIN_TIME,
                                     MIN_DISTANCE.toFloat(), this
@@ -137,6 +137,7 @@ class GPSTrack(c: Context) : Service(), LocationListener {
         private val MIN_TIME = (1000 * 1 * 1).toLong() //1minute
         val NEW_POSITION = "newPosition"
 
+        //ada type hp yg gak bisa ditaro permissiion di android manifest doang
         fun checkPermission(context: Context?): Boolean {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -153,6 +154,7 @@ class GPSTrack(c: Context) : Service(), LocationListener {
         }
     }
 
+    //nampilin dialog, buat ke setting lokasi di hp kita
     fun showSettingGPS() {
         val alertBuilder = AlertDialog.Builder(context)
 
